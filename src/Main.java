@@ -1,3 +1,5 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Main {
@@ -55,6 +57,7 @@ public class Main {
         print(5, strList);
         Collections.sort(strList);
         print(6, strList);
+        Collections.shuffle(strList);//打乱顺序
         Collections.sort(strList, new Comparator<String>() { // 实现内部匿名类,可以指定排序算法
             @Override
             public int compare(String o1, String o2) {
@@ -111,6 +114,16 @@ public class Main {
         }
     }
 
+    private static void demoFunction(){
+        Random randon = new Random();
+        print(1,randon.nextInt(100));//0-100的随机数
+        Date date = new Date();
+        print(2,date);//获取时间
+        print(3,date.getTime());//获取从1970年到当前的毫秒数,可用于比较时间的早晚
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        print(4,df.format(date));
+    }
+
     public static void main(String[] args) {
 //        print(1,"hello");
 //        demoString();
@@ -118,6 +131,7 @@ public class Main {
 //        demoList();
 //        demoMapTable();
 //        demoSet();
-        demoException();
+//        demoException();
+        demoFunction();
     }
 }
