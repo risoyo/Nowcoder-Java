@@ -15,7 +15,7 @@ public class Main {
         print(2, str.charAt(1)); // 输出索引为1的元素
         print(3,str.codePointAt(1));//索引为1的元素的ascii码
         print(4,str.compareTo("hello"));//判断两个字符串是否相同
-        print(5,str.contains("e"));
+        print(5,str.contains("e"));//写个字
 //        print(2,);
 //        print(2,);
     }
