@@ -29,6 +29,11 @@ public class Main {
         sb.append(1.2);
         print(12,sb);
     }
+    public static void demoControlFlow(){
+        int a = 2;
+        int target = a == 2 ? 1 : 3;//a == 2 ? 1 : 3,先判断a是否为2,如果是,走':'之前的分支,不是,走':'之后的分支
+        print(1,target);
+    }
     public static void main(String[] args) {
 //        print(1,"hello");
         demoString();
